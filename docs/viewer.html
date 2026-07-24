@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nội dung ADHD - Viewer</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .markdown-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .markdown-content h1, .markdown-content h2, .markdown-content h3 {
+            color: #2c3e50;
+        }
+        .markdown-content p {
+            margin-bottom: 16px;
+        }
+        .markdown-content ul, .markdown-content ol {
+            margin-bottom: 16px;
+            padding-left: 20px;
+        }
+        .markdown-content blockquote {
+            border-left: 4px solid #ddd;
+            padding-left: 16px;
+            margin: 20px 0;
+            color: #666;
+            font-style: italic;
+        }
+        .markdown-content img {
+            max-width: 100%;
+            height: auto;
+            margin: 16px 0;
+        }
+        .markdown-content a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        .markdown-content a:hover {
+            text-decoration: underline;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+    <!-- Background decoration -->
+    <div class="bg-decoration"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <!-- Logo will be added here with proper source attribution -->
+                    <div>
+                        <h1>Nhận diện ADHD</h1>
+                        <p>Hiểu và hỗ trợ hiệu quả</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="markdown-content">
+        <a href="index.html" class="back-link">← Về trang chủ</a>
+
+        <!-- Content will be inserted here -->
+        <div id="markdown-content">
+            <!-- Markdown content will be loaded here -->
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Website Nhận diện ADHD</p>
+            <p>Được thực hiện với mục đích giáo dục và hỗ trợ cộng đồng</p>
+        </div>
+    </footer>
+
+    <script>
+        // Fetch and display markdown content
+        fetch('noi-dung-khach.md')
+            .then(response => response.text())
+            .then(markdownText => {
+                // Convert markdown to HTML with proper image path handling
+                let html = markdownText
+                    // Handle images with dimensions (remove dimension syntax)
+                    .replace(/!\[([^\]]*)\]\(([^)]+)\)\s*{width="[^"]+"\s+height="[^"]+"}/g, '<img src="$2" alt="$1">')
+                    // Handle regular images
+                    .replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<img src="$2" alt="$1">')
+                    // Handle links
+                    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>')
+                    // Handle headers
+                    .replace(/^# (.*$)/gm, '<h1>$1</h1>')
+                    .replace(/^## (.*$)/gm, '<h2>$1</h2>')
+                    .replace(/^### (.*$)/gm, '<h3>$1</h3>')
+                    // Handle bold
+                    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                    // Handle italic
+                    .replace(/\*(.*?)\*/g, '<em>$1</em>')
+                    // Handle blockquotes
+                    .replace(/^> (.*$)/gm, '<blockquote>$1</blockquote>')
+                    // Handle lists (simple version)
+                    .replace(/^\s*[-*+] (.+)$/gm, '<ul><li>$1</li></ul>')
+                    .replace(/^\s*\d+\. (.+)$/gm, '<ol><li>$1</li></ol>')
+                    // Handle line breaks and paragraphs
+                    .replace(/\n\n/g, '</p><p>')
+                    .replace(/^([^\n]+$)/gm, '<p>$1</p>')
+                    // Clean up
+                    .replace(/<p><\/p>/g, '')
+                    .replace(/<p>\\n<\/p>/g, '<br>');
+
+                document.getElementById('markdown-content').innerHTML = html;
+            })
+            .catch(err => {
+                document.getElementById('markdown-content').innerHTML = '<p>Lỗi khi tải nội dung: ' + err.message + '</p>';
+            });
+    </script>
+</body>
+</html>
