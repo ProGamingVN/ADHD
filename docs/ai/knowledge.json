@@ -1,0 +1,594 @@
+[
+  {
+    "intent": "greeting",
+    "patterns": [
+      "chào bạn",
+      "chao ban",
+      "xin chào",
+      "xin chao",
+      "hi",
+      "hello",
+      "chào",
+      "chao",
+      "alo",
+      "ê bot ơi",
+      "chào buổi sáng",
+      "chào buổi tối"
+    ],
+    "answer": "Chào bạn! Mình là chatbot hỗ trợ thông tin về ADHD. Bạn muốn tìm hiểu điều gì hôm nay?"
+  },
+  {
+    "intent": "farewell",
+    "patterns": [
+      "tạm biệt",
+      "tam biet",
+      "bye",
+      "bye bye",
+      "hẹn gặp lại",
+      "hen gap lai",
+      "mình đi đây",
+      "minh di day",
+      "kết thúc trò chuyện",
+      "thoát"
+    ],
+    "answer": "Tạm biệt bạn! Nếu cần tìm hiểu thêm về ADHD, cứ quay lại hỏi mình nhé."
+  },
+  {
+    "intent": "thanks",
+    "patterns": [
+      "cảm ơn",
+      "cam on",
+      "cảm ơn bạn nhiều",
+      "thanks",
+      "thank you",
+      "cam on nha",
+      "cảm ơn nhiều nha"
+    ],
+    "answer": "Không có gì, rất vui vì đã giúp được bạn! Nếu còn thắc mắc gì về ADHD, cứ hỏi mình nhé."
+  },
+  {
+    "intent": "bot_identity",
+    "patterns": [
+      "bạn là ai",
+      "ban la ai",
+      "bạn là chatbot gì",
+      "bạn được tạo ra để làm gì",
+      "gioi thieu ban than di",
+      "bạn có chức năng gì",
+      "bot nay dung de lam gi"
+    ],
+    "answer": "Mình là chatbot cung cấp thông tin về ADHD (Rối loạn tăng động giảm chú ý), giúp bạn hiểu đúng về nhận diện, nguyên nhân, hậu quả, điều trị và hỗ trợ cho người mắc ADHD. Đây là nội dung mang tính giáo dục, không thay thế chẩn đoán hay tư vấn y tế chuyên môn."
+  },
+  {
+    "intent": "adhd_definition",
+    "patterns": [
+      "ADHD là gì",
+      "adhd la gi",
+      "rối loạn tăng động giảm chú ý là gì",
+      "roi loan tang dong giam chu y la gi",
+      "ADHD nghĩa là sao",
+      "ADHD có phải bệnh không",
+      "giải thích giúp mình về ADHD",
+      "adhd la benh gi vay"
+    ],
+    "answer": "ADHD (Attention Deficit Hyperactivity Disorder) là Rối loạn tăng động giảm chú ý - một rối loạn phát triển thần kinh, đặc trưng bởi các biểu hiện giảm chú ý và/hoặc tăng động - bốc đồng, ảnh hưởng đến chức năng sống hằng ngày."
+  },
+  {
+    "intent": "adhd_dsm5_criteria",
+    "patterns": [
+      "ADHD được chẩn đoán dựa trên tiêu chuẩn nào",
+      "tieu chuan chan doan ADHD la gi",
+      "DSM-5 là gì",
+      "dsm 5 la gi",
+      "chẩn đoán ADHD theo tiêu chuẩn nào",
+      "adhd chan doan the nao"
+    ],
+    "answer": "ADHD được chẩn đoán dựa trên tiêu chuẩn DSM-5 (Cẩm nang Chẩn đoán và Thống kê Rối loạn Tâm thần), phân loại thành các nhóm biểu hiện: giảm chú ý trội, tăng động - bốc đồng trội, hoặc hỗn hợp, với các triệu chứng phải xuất hiện ít nhất 6 tháng gần nhất."
+  },
+  {
+    "intent": "adhd_three_presentations",
+    "patterns": [
+      "ADHD có mấy loại",
+      "adhd co may loai",
+      "các dạng của ADHD là gì",
+      "phân loại ADHD như thế nào",
+      "adhd co bao nhieu the",
+      "ADHD gồm những nhóm biểu hiện nào"
+    ],
+    "answer": "ADHD có 3 dạng biểu hiện chính: (1) Giảm chú ý trội (Predominantly Inattentive), (2) Tăng động - Hấp tấp trội (Hyperactive-Impulsive), và (3) Hỗn hợp (Combined Presentation) khi cả hai nhóm triệu chứng xuất hiện đồng thời."
+  },
+  {
+    "intent": "adhd_inattentive_type",
+    "patterns": [
+      "giảm chú ý trội là gì",
+      "giam chu y troi la gi",
+      "biểu hiện giảm chú ý của ADHD là gì",
+      "dấu hiệu giảm chú ý ADHD",
+      "adhd loai giam chu y co trieu chung gi",
+      "Predominantly Inattentive là gì"
+    ],
+    "answer": "Dạng giảm chú ý trội biểu hiện qua: khó duy trì sự tập trung, dễ bị phân tâm bởi tác nhân bên ngoài, hay quên lịch trình hằng ngày, gặp trở ngại khi tổ chức công việc và quản lý thời gian."
+  },
+  {
+    "intent": "adhd_hyperactive_impulsive_type",
+    "patterns": [
+      "tăng động bốc đồng là gì",
+      "tang dong boc dong la gi",
+      "biểu hiện tăng động của ADHD",
+      "dấu hiệu hấp tấp của ADHD",
+      "Hyperactive-Impulsive là gì",
+      "adhd loai tang dong co trieu chung gi"
+    ],
+    "answer": "Dạng tăng động - hấp tấp trội biểu hiện qua: dư thừa năng lượng thể chất, thiếu khả năng kiểm soát xung động, bồn chồn, khó ngồi yên, nói quá nhiều, cắt ngang lời người khác và thiếu kiên nhẫn."
+  },
+  {
+    "intent": "adhd_combined_type",
+    "patterns": [
+      "ADHD hỗn hợp là gì",
+      "adhd hon hop la gi",
+      "Combined Presentation là gì",
+      "dạng hỗn hợp của ADHD",
+      "adhd the hon hop co dac diem gi"
+    ],
+    "answer": "Dạng hỗn hợp (Combined Presentation) là khi cả các triệu chứng giảm chú ý và tăng động - bốc đồng xuất hiện đồng thời, đều đạt tương đương các tiêu chuẩn chẩn đoán trong ít nhất 6 tháng gần nhất."
+  },
+  {
+    "intent": "adhd_causes_overview",
+    "patterns": [
+      "nguyên nhân gây ADHD là gì",
+      "nguyen nhan gay adhd la gi",
+      "vì sao bị ADHD",
+      "vi sao bi adhd",
+      "ADHD do đâu mà có",
+      "cai gi gay ra adhd"
+    ],
+    "answer": "Theo y học hiện đại, ADHD là một tình trạng y sinh học phức tạp, không phải do sự lười biếng hay giáo dục sai cách. Nguyên nhân chủ yếu đến từ yếu tố di truyền, sự khác biệt trong cấu trúc và chức năng não bộ, cùng sự thiếu hụt các chất dẫn truyền thần kinh."
+  },
+  {
+    "intent": "adhd_genetic_factor",
+    "patterns": [
+      "ADHD có di truyền không",
+      "adhd co di truyen khong",
+      "yếu tố di truyền của ADHD",
+      "adhd co phai do gen khong",
+      "hệ số di truyền của ADHD là bao nhiêu"
+    ],
+    "answer": "Nghiên cứu chứng minh ADHD có hệ số di truyền rất cao, dao động từ 70% đến 80%, cho thấy yếu tố di truyền đóng vai trò lớn trong nguyên nhân gây bệnh."
+  },
+  {
+    "intent": "adhd_brain_structure",
+    "patterns": [
+      "não người ADHD khác gì người bình thường",
+      "nao nguoi adhd khac gi",
+      "cấu trúc não bộ trong ADHD",
+      "fMRI cho thấy gì ở người ADHD",
+      "vỏ não trước trán liên quan gì đến ADHD",
+      "ADHD brain vs normal brain"
+    ],
+    "answer": "Chẩn đoán hình ảnh học (fMRI) cho thấy ở người ADHD có sự chậm phát triển và giảm lưu lượng máu hoạt động ở vùng vỏ não trước trán - trung tâm điều hành nhận thức và kiểm soát xung động."
+  },
+  {
+    "intent": "adhd_neurotransmitter_general",
+    "patterns": [
+      "chất dẫn truyền thần kinh liên quan ADHD là gì",
+      "chat dan truyen than kinh adhd",
+      "ADHD liên quan đến chất nào trong não",
+      "vai trò của chất dẫn truyền thần kinh trong ADHD"
+    ],
+    "answer": "Ở người ADHD, hệ thống truyền tải tín hiệu của não bộ bị rối loạn điều hòa, dẫn đến sự thiếu hụt hai chất dẫn truyền thần kinh cốt lõi là Dopamine (liên quan đến động lực) và Norepinephrine (liên quan đến sự tập trung)."
+  },
+  {
+    "intent": "neurotransmitter_dopamine",
+    "patterns": [
+      "Dopamine là gì",
+      "dopamin la gi",
+      "dopamine liên quan gì đến ADHD",
+      "dopamine trong ADHD có vai trò gì"
+    ],
+    "answer": "Dopamine là chất dẫn truyền thần kinh liên quan đến động lực. Ở người ADHD, dopamine thường bị thiếu hụt, góp phần gây ra các khó khăn trong duy trì sự tập trung và động lực."
+  },
+  {
+    "intent": "neurotransmitter_norepinephrine",
+    "patterns": [
+      "Norepinephrine là gì",
+      "noradrenaline la gi",
+      "norepinephrine liên quan gì đến ADHD",
+      "norepinephrine trong não có vai trò gì"
+    ],
+    "answer": "Norepinephrine là chất dẫn truyền thần kinh liên quan đến sự tập trung. Ở người ADHD, norepinephrine thường bị thiếu hụt, ảnh hưởng đến khả năng tập trung chú ý."
+  },
+  {
+    "intent": "adhd_consequences_overview",
+    "patterns": [
+      "ADHD gây ra hậu quả gì",
+      "hau qua cua adhd la gi",
+      "ADHD ảnh hưởng thế nào đến cuộc sống",
+      "roi loan adhd gay hau qua gi"
+    ],
+    "answer": "ADHD có thể gây ra nhiều hậu quả: suy giảm hiệu suất công việc/học tập, tổn thương tâm lý, trở ngại trong các mối quan hệ, và khó khăn trong quản lý cuộc sống hằng ngày."
+  },
+  {
+    "intent": "adhd_consequences_work_study",
+    "patterns": [
+      "ADHD ảnh hưởng đến học tập và công việc thế nào",
+      "adhd anh huong hoc tap cong viec",
+      "ADHD gây trì hoãn không",
+      "adhd co gay cham deadline khong",
+      "adhd va burnout"
+    ],
+    "answer": "ADHD khiến người mắc dễ rơi vào vòng lặp trì hoãn, chậm deadline, khó hoàn thành mục tiêu dài hạn, quản lý thời gian kém, từ đó dễ dẫn đến hội chứng kiệt sức (burnout)."
+  },
+  {
+    "intent": "adhd_consequences_psychological",
+    "patterns": [
+      "ADHD ảnh hưởng tâm lý thế nào",
+      "adhd co gay tram cam khong",
+      "ADHD có gây lo âu không",
+      "tổn thương tâm lý do ADHD",
+      "adhd va tu ti"
+    ],
+    "answer": "Việc liên tục đối mặt với thất bại và định kiến như bị gắn mác 'lười biếng' hay 'thiếu tập trung' có thể kích hoạt trạng thái tự ti, lo âu kéo dài và trầm cảm ở người mắc ADHD."
+  },
+  {
+    "intent": "adhd_consequences_relationships",
+    "patterns": [
+      "ADHD ảnh hưởng đến các mối quan hệ thế nào",
+      "adhd anh huong moi quan he",
+      "ADHD gây xung đột với người khác không",
+      "vi sao nguoi adhd hay ngat loi"
+    ],
+    "answer": "Tính bốc đồng, hấp tấp và xu hướng ngắt lời người khác của người ADHD dễ dẫn đến hiểu lầm và xung đột không đáng có trong gia đình, bạn bè và đồng nghiệp."
+  },
+  {
+    "intent": "adhd_consequences_life_management",
+    "patterns": [
+      "ADHD ảnh hưởng đến quản lý cuộc sống thế nào",
+      "adhd anh huong quan ly cuoc song",
+      "người ADHD có hay làm mất đồ không",
+      "adhd va chi tieu"
+    ],
+    "answer": "Người mắc ADHD thường xuyên làm thất lạc đồ đạc, gặp thách thức trong chi tiêu, dễ mua sắm bốc đồng và khó duy trì giờ giấc sinh hoạt khoa học."
+  },
+  {
+    "intent": "adhd_tic_comorbidity",
+    "patterns": [
+      "ADHD có liên quan đến hội chứng TIC không",
+      "adhd va tic",
+      "ADHD và Tourette có liên quan gì",
+      "hoi chung tic la gi",
+      "adhd co di kem tic khong"
+    ],
+    "answer": "ADHD hiếm khi tồn tại đơn độc. Nghiên cứu lâm sàng chỉ ra khoảng 60%-80% cá nhân mắc hội chứng TIC (hoặc Tourette) cũng ghi nhận có các biểu hiện của ADHD, vì vậy cần phác đồ can thiệp toàn diện và cá nhân hóa."
+  },
+  {
+    "intent": "adhd_treatment_overview",
+    "patterns": [
+      "ADHD chữa như thế nào",
+      "adhd dieu tri the nao",
+      "ADHD có chữa được không",
+      "cách điều trị ADHD",
+      "adhd co khoi khong"
+    ],
+    "answer": "ADHD được can thiệp thông qua kết hợp y khoa (thuốc theo chỉ định bác sĩ chuyên khoa, liệu pháp thể chất, liệu pháp tâm lý) và các phương pháp hỗ trợ thực tế như tập thể dục, ăn uống lành mạnh, thiền chánh niệm và yoga."
+  },
+  {
+    "intent": "adhd_medication_stimulant",
+    "patterns": [
+      "thuốc kích thích thần kinh trung ương điều trị ADHD là gì",
+      "thuoc kich thich adhd la gi",
+      "Amphetamines dùng để làm gì",
+      "Methylphenidate là thuốc gì",
+      "thuốc ADHD có tác dụng phụ gì"
+    ],
+    "answer": "Thuốc kích thích thần kinh trung ương (như Amphetamines, Methylphenidate) giúp làm giảm triệu chứng ADHD bằng cách hỗ trợ não tái hấp thu dopamine và norepinephrine. Tuy nhiên có thể gây tác dụng không mong muốn như giảm sự thèm ăn và tăng huyết áp, cần dùng dưới chỉ định của bác sĩ chuyên khoa."
+  },
+  {
+    "intent": "adhd_medication_nonstimulant",
+    "patterns": [
+      "thuốc điều trị ADHD không chứa chất kích thích là gì",
+      "Atomoxetine là thuốc gì",
+      "Clonidine dùng để làm gì",
+      "Guanfacine là thuốc gì",
+      "thuốc adhd khong gay nghien la gi"
+    ],
+    "answer": "Nhóm thuốc không chứa chất kích thích gồm Atomoxetine (kéo dài thời gian tác dụng norepinephrine, dùng 1 lần/ngày nhưng có thể ảnh hưởng gan), Clonidine (giảm hiếu động, bốc đồng, mất tập trung nhưng hạ huyết áp) và Guanfacine (cải thiện trí nhớ, hành vi và tính hiếu động)."
+  },
+  {
+    "intent": "adhd_medication_safety",
+    "patterns": [
+      "thuốc ADHD có gây nghiện không",
+      "thuoc adhd co gay nghien khong",
+      "uống thuốc ADHD có bị đổi tính cách không",
+      "thuoc adhd co an toan khong"
+    ],
+    "answer": "Khi dùng đúng liều theo chỉ định nghiêm ngặt của bác sĩ, thuốc điều trị ADHD như Methylphenidate mang lại hiệu quả cải thiện tập trung cao, an toàn và không gây nghiện hay thay đổi bản sắc tính cách của người dùng."
+  },
+  {
+    "intent": "adhd_treatment_exercise",
+    "patterns": [
+      "tập thể dục có giúp giảm triệu chứng ADHD không",
+      "the duc co giup adhd khong",
+      "vận động thể chất giúp ích gì cho ADHD",
+      "tap the duc va adhd"
+    ],
+    "answer": "Tập thể dục thường xuyên giúp đốt cháy năng lượng dư thừa, tăng dopamine, norepinephrine và serotonin, từ đó cải thiện tập trung, động lực, trí nhớ và tâm trạng ở người ADHD."
+  },
+  {
+    "intent": "adhd_treatment_diet",
+    "patterns": [
+      "chế độ ăn uống cho người ADHD như thế nào",
+      "an uong the nao tot cho adhd",
+      "adhd nen an gi",
+      "dinh duong cho nguoi adhd"
+    ],
+    "answer": "Người ADHD nên ăn uống lành mạnh, bổ sung protein, carbohydrate phức tạp và omega-3 để giúp tỉnh táo, giảm hiếu động và duy trì năng lượng ổn định lâu dài."
+  },
+  {
+    "intent": "adhd_treatment_mindfulness",
+    "patterns": [
+      "thiền chánh niệm có giúp ADHD không",
+      "thien co giup adhd khong",
+      "mindfulness va adhd",
+      "thien chanh niem tac dung gi voi adhd"
+    ],
+    "answer": "Thiền chánh niệm giúp tăng hoạt động ở vùng vỏ não trước trán - vùng chịu trách nhiệm về sự chú ý, lập kế hoạch và kiểm soát xung động, từ đó cải thiện điều tiết cảm xúc ở người ADHD."
+  },
+  {
+    "intent": "adhd_treatment_yoga",
+    "patterns": [
+      "yoga có giúp ích cho người ADHD không",
+      "yoga va adhd",
+      "tập yoga có tác dụng gì với ADHD"
+    ],
+    "answer": "Yoga giúp rèn luyện sự cân bằng và tĩnh lặng, là công cụ hữu ích để người ADHD làm mới bản thân khi cảm thấy quá tải hoặc mất kiểm soát."
+  },
+  {
+    "intent": "adhd_nonmedical_support",
+    "patterns": [
+      "phương pháp hỗ trợ ADHD không dùng thuốc là gì",
+      "ho tro adhd khong dung thuoc",
+      "cách quản lý cuộc sống cho người ADHD",
+      "lieu phap hanh vi cho adhd la gi",
+      "công cụ hỗ trợ người ADHD"
+    ],
+    "answer": "Phương pháp phi y khoa hiệu quả nhất là Liệu pháp hành vi và Điều chỉnh môi trường: tối giản hóa không gian làm việc/học tập, giảm tác nhân gây nhiễu, sử dụng công cụ trực quan như check-list, đồng hồ Pomodoro, bảng kế hoạch mã hóa màu, kết hợp duy trì giấc ngủ chất lượng và 30-60 phút vận động thể chất mỗi ngày."
+  },
+  {
+    "intent": "adhd_treatment_hospitals_hcm",
+    "patterns": [
+      "khám ADHD ở đâu tại TP.HCM",
+      "benh vien kham adhd o hcm",
+      "cơ sở điều trị ADHD tại Sài Gòn",
+      "danh sách bệnh viện khám ADHD TPHCM"
+    ],
+    "answer": "Tại TP. Hồ Chí Minh, bạn có thể đến: Bệnh viện Tâm thần TP. HCM (766 Võ Văn Kiệt, P. Chợ Quán; 26 Bình Minh, xã Bình Lợi; 165B Phan Đăng Lưu, P. Cầu Kiệu), Bệnh viện Nhi Đồng 1, 2 và Nhi Đồng Thành phố, Bệnh viện Đại học Y Dược TP. HCM (215 Hồng Bàng, Chợ Lớn), và Bệnh viện Nhân dân 115 (527 Sư Vạn Hạnh, Hòa Hưng)."
+  },
+  {
+    "intent": "adhd_treatment_hospitals_hanoi",
+    "patterns": [
+      "khám ADHD ở đâu tại Hà Nội",
+      "benh vien kham adhd o ha noi",
+      "cơ sở điều trị ADHD tại Hà Nội",
+      "danh sách bệnh viện khám ADHD Hà Nội"
+    ],
+    "answer": "Tại Hà Nội, bạn có thể đến: Viện Sức khỏe tâm thần - BV Bạch Mai (Tòa nhà T4-T5-T6, số 78 Giải Phóng, Đống Đa), Khoa Tâm thần - BV Nhi Trung ương (18/879 La Thành, Đống Đa), và Trung tâm Y khoa số 1 - BV Đại học Y Hà Nội (Nhà A5, số 1 Tôn Thất Tùng, Đống Đa)."
+  },
+  {
+    "intent": "adhd_myth_laziness",
+    "patterns": [
+      "ADHD có phải do lười biếng không",
+      "adhd co phai do luoi bieng",
+      "người ADHD có phải thiếu kỷ luật không",
+      "adhd chi la lam bieng thoi dung khong"
+    ],
+    "answer": "Không đúng. Y học hiện đại khẳng định ADHD là rối loạn phát triển thần kinh mang tính y sinh học, do thiếu hụt các chất dẫn truyền thần kinh (Dopamine và Norepinephrine) và sự chậm phát triển ở vùng vỏ não trước trán, chứ không phải do lười biếng hay thiếu kỷ luật."
+  },
+  {
+    "intent": "adhd_myth_screen_time",
+    "patterns": [
+      "xem điện thoại nhiều có gây ADHD không",
+      "xem dien thoai nhieu co bi adhd khong",
+      "mạng xã hội có gây ra ADHD không",
+      "thiet bi dien tu co phai nguyen nhan adhd"
+    ],
+    "answer": "Mạng xã hội và thiết bị điện tử không phải là nguyên nhân gốc rễ gây ra ADHD, mà chỉ là tác nhân gây nhiễu môi trường có thể bộc lộ hoặc làm trầm trọng hơn triệu chứng ở người đã mắc ADHD."
+  },
+  {
+    "intent": "adhd_myth_name_meaning",
+    "patterns": [
+      "ADHD có nghĩa là không thể tập trung không",
+      "ten goi giam chu y co gay hieu lam khong",
+      "vì sao gọi là giảm chú ý"
+    ],
+    "answer": "Tên gọi 'giảm chú ý' dễ gây hiểu lầm là thiếu tập trung hoàn toàn. Thực tế, người ADHD khó điều khiển sự tập trung một cách chủ động - họ có thể mất tập trung ở nhiệm vụ lặp lại, thiếu kích thích, nhưng lại có thể rơi vào trạng thái 'siêu tập trung' (hyperfocus) khi gặp chủ đề hứng thú hoặc áp lực sát giờ, do dopamine tăng đột biến."
+  },
+  {
+    "intent": "adhd_myth_hyperfocus",
+    "patterns": [
+      "hyperfocus là gì",
+      "sieu tap trung la gi",
+      "vì sao người ADHD có thể tập trung cao độ đôi lúc"
+    ],
+    "answer": "Hyperfocus (siêu tập trung) là trạng thái người ADHD có thể tập trung cao độ vào một chủ đề hứng thú hoặc khi có áp lực sát giờ, do dopamine tăng đột biến trong não."
+  },
+  {
+    "intent": "adhd_myth_disappear_adulthood",
+    "patterns": [
+      "ADHD có tự hết khi lớn lên không",
+      "adhd co tu bien mat khong",
+      "lớn lên ADHD có khỏi không",
+      "adhd het khi truong thanh khong"
+    ],
+    "answer": "Không đúng. ADHD là một hội chứng mãn tính. Khi trưởng thành, triệu chứng tăng động hình thể có xu hướng giảm dần nhưng thường chuyển hóa thành bồn chồn bên trong, trong khi triệu chứng giảm chú ý và bốc đồng vẫn tiếp tục kéo dài."
+  },
+  {
+    "intent": "adhd_adult",
+    "patterns": [
+      "người lớn có thể mắc ADHD không",
+      "nguoi lon co bi adhd khong",
+      "adhd o nguoi truong thanh",
+      "dấu hiệu ADHD ở người lớn"
+    ],
+    "answer": "Người lớn hoàn toàn có thể mắc ADHD, thường là di chứng từ thời thơ ấu chưa được chẩn đoán, biểu hiện qua quản lý cuộc sống kém, trì hoãn kinh niên, đổi việc liên tục và dễ kiệt sức (burnout)."
+  },
+  {
+    "intent": "adhd_myth_medication_addiction",
+    "patterns": [
+      "uống thuốc ADHD có gây nghiện không",
+      "thuoc adhd co gay nghien that khong",
+      "thuốc kích thích thần kinh điều trị ADHD có an toàn không"
+    ],
+    "answer": "Đây là một hiểu lầm phổ biến. Khi dùng đúng liều dưới chỉ định nghiêm ngặt của bác sĩ, thuốc kích thích chuyên khoa như Methylphenidate mang lại hiệu quả cải thiện tập trung cao, an toàn và không gây nghiện như khi lạm dụng chất kích thích tự do."
+  },
+  {
+    "intent": "adhd_rsd",
+    "patterns": [
+      "RSD là gì",
+      "hội chứng nhạy cảm với sự từ chối là gì",
+      "rsd trong adhd la gi",
+      "vì sao người ADHD dễ tổn thương khi bị chê"
+    ],
+    "answer": "RSD (Rejection Sensitive Dysphoria - hội chứng nhạy cảm với sự từ chối) là tình trạng người ADHD phản ứng cảm xúc quá mức trước lời chỉ trích, khiến hành vi vô ý của họ dễ bị hiểu sai là ích kỷ, thô lỗ hoặc thiếu tôn trọng, gây rạn nứt không đáng có trong các mối quan hệ."
+  },
+  {
+    "intent": "adhd_social_relationships",
+    "patterns": [
+      "ADHD ảnh hưởng đến việc kết bạn không",
+      "nguoi adhd co kho ket ban khong",
+      "adhd va cac moi quan he xa hoi",
+      "adhd anh huong tinh cam the nao"
+    ],
+    "answer": "Người mắc ADHD thường gặp khó khăn trong việc kết bạn, duy trì quan hệ tình cảm và dễ xung đột với đồng nghiệp, do tính hấp tấp, khó kiểm soát xung động khiến họ dễ ngắt lời hoặc buột miệng nói trước khi suy nghĩ."
+  },
+  {
+    "intent": "contact_facebook_community",
+    "patterns": [
+      "có cộng đồng nào cho người ADHD không",
+      "cong dong facebook adhd la gi",
+      "làm sao để liên hệ nhóm hỗ trợ ADHD",
+      "fanpage ve adhd o dau"
+    ],
+    "answer": "Bạn có thể liên hệ trực tiếp qua Cộng đồng Facebook và Fanpage Facebook của dự án để kết nối với nhóm học sinh thực hiện và những người quan tâm đến chủ đề ADHD."
+  },
+  {
+    "intent": "project_info",
+    "patterns": [
+      "dự án này do ai thực hiện",
+      "du an zaphyr la gi",
+      "ai làm ra trang thông tin ADHD này",
+      "ve nhom thuc hien du an"
+    ],
+    "answer": "Đây là Dự án Zaphyr, được thực hiện bởi một nhóm học sinh với mục đích giáo dục và nâng cao nhận thức cộng đồng về ADHD."
+  },
+  {
+    "intent": "source_disclaimer",
+    "patterns": [
+      "nguồn thông tin này lấy từ đâu",
+      "noi dung nay co dang tin cay khong",
+      "thông tin ADHD này có thay thế bác sĩ không",
+      "day co phai tu van y te khong"
+    ],
+    "answer": "Nội dung được tổng hợp từ các nguồn y khoa uy tín (như Cleveland Clinic, Hội Tâm Thần Mỹ, vinmec.com) nhằm mục đích giáo dục và nâng cao nhận thức cộng đồng, không thay thế chẩn đoán hoặc tư vấn y tế chuyên môn. Nếu nghi ngờ mắc ADHD, bạn nên đến các cơ sở y tế chuyên khoa để được thăm khám."
+  },
+  {
+    "intent": "medication_dextroamphetamine",
+    "patterns": [
+      "dextroamphetamine là gì",
+      "dextroamphetamine la gi",
+      "thuốc dextroamphetamine dùng để làm gì",
+      "dextroamphetamine co phai thuoc adhd khong",
+      "dextroamphetamine điều trị ADHD như thế nào"
+    ],
+    "answer": "Dextroamphetamine là một hoạt chất thuộc nhóm Amphetamines - thuốc kích thích thần kinh trung ương dùng dưới dạng uống để điều trị ADHD, giúp làm giảm triệu chứng nhưng có thể gây tác dụng không mong muốn như giảm sự thèm ăn và tăng huyết áp."
+  },
+  {
+    "intent": "medication_lisdexamfetamine",
+    "patterns": [
+      "lisdexamfetamine là gì",
+      "lisdexamfetamine la gi",
+      "thuốc lisdexamfetamine dùng để làm gì",
+      "lisdexamfetamine co phai thuoc adhd khong",
+      "lisdexamfetamine điều trị ADHD như thế nào"
+    ],
+    "answer": "Lisdexamfetamine là một hoạt chất thuộc nhóm Amphetamines - thuốc kích thích thần kinh trung ương dùng dưới dạng uống để điều trị ADHD, giúp làm giảm triệu chứng nhưng có thể gây tác dụng không mong muốn như giảm sự thèm ăn và tăng huyết áp."
+  },
+  {
+    "intent": "medication_methamphetamine",
+    "patterns": [
+      "Methamphetamine là gì",
+      "methamphetamine la gi",
+      "methamphetamine có dùng điều trị ADHD không",
+      "methamphetamine co phai thuoc adhd khong",
+      "vì sao methamphetamine liên quan đến ADHD"
+    ],
+    "answer": "Methamphetamine là một hoạt chất có thành phần tương tự nhóm Amphetamines - thuốc kích thích thần kinh trung ương, dùng dưới dạng uống trong một số trường hợp điều trị ADHD theo chỉ định nghiêm ngặt của bác sĩ chuyên khoa, với công dụng làm giảm triệu chứng ADHD nhưng có thể gây tác dụng không mong muốn như giảm sự thèm ăn và tăng huyết áp."
+  },
+  {
+    "intent": "source_cleveland_clinic",
+    "patterns": [
+      "Cleveland Clinic nói gì về ADHD",
+      "cleveland clinic la nguon nao",
+      "thông tin ADHD từ Cleveland Clinic",
+      "cleveland clinic dinh nghia adhd the nao"
+    ],
+    "answer": "Cleveland Clinic là một trong những nguồn y khoa uy tín được tham khảo, định nghĩa ADHD (Attention Deficit Hyperactivity Disorder) là rối loạn phát triển thần kinh với các biểu hiện giảm chú ý và/hoặc tăng động - bốc đồng."
+  },
+  {
+    "intent": "source_apa",
+    "patterns": [
+      "Hội Tâm Thần Mỹ nói gì về ADHD",
+      "hoi tam than my la gi",
+      "APA định nghĩa ADHD thế nào",
+      "hiep hoi tam than hoc my ve adhd"
+    ],
+    "answer": "Hội Tâm Thần Mỹ (Hiệp hội Tâm thần học Hoa Kỳ) là cơ quan xây dựng tiêu chuẩn chẩn đoán DSM-5, được dùng làm căn cứ để nhận diện và phân loại ADHD."
+  },
+  {
+    "intent": "source_psych2go",
+    "patterns": [
+      "Psych2Go Vietnam là gì",
+      "psych2go vietnam la nguon nao",
+      "psych2go noi gi ve adhd"
+    ],
+    "answer": "Psych2Go Vietnam là một trong những nguồn tham khảo về '6 dấu hiệu và triệu chứng của bệnh ADHD', được tổng hợp trong tài liệu nhằm giúp nhận diện ADHD dễ hiểu hơn."
+  },
+  {
+    "intent": "source_vinmec",
+    "patterns": [
+      "vinmec.com nói gì về ADHD",
+      "vinmec la nguon nao",
+      "thông tin điều trị ADHD từ vinmec"
+    ],
+    "answer": "vinmec.com là nguồn y khoa được tham khảo cho phần 'Chỉ định dùng thuốc điều trị ADHD', cung cấp thông tin về các loại thuốc và chỉ định điều trị."
+  },
+  {
+    "intent": "expert_author",
+    "patterns": [
+      "ai là bác sĩ tư vấn nội dung này",
+      "ThS. BS. Đào Thị Thu Hương là ai",
+      "bác sĩ nào phụ trách nội dung ADHD này",
+      "hoi bac si o dau"
+    ],
+    "answer": "Nội dung phần Điều trị & Thuốc ADHD có sự tham vấn từ ThS. BS. Đào Thị Thu Hương. Nếu có thắc mắc chuyên sâu, bạn có thể dùng mục 'Hỏi Bác sĩ' để được giải đáp."
+  },
+  {
+    "intent": "website_structure",
+    "patterns": [
+      "trang này có những nội dung gì",
+      "muc luc bai viet gom nhung gi",
+      "năm chủ đề chính của bài viết này là gì",
+      "khám phá kiến thức về ADHD gồm phần nào"
+    ],
+    "answer": "Bài viết 'Vài Điều Về ADHD' được tổ chức theo 5 chủ đề chính: Nhận diện, Nguyên nhân - Hậu quả, Điều trị - Hỗ trợ, Cơ sở điều trị, và Câu hỏi thường gặp, giúp bạn khám phá kiến thức về ADHD một cách có hệ thống."
+  },
+  {
+    "intent": "publication_info",
+    "patterns": [
+      "bài viết này được biên soạn năm nào",
+      "adhd 2026 la gi",
+      "day co phai phan 3 khong",
+      "nội dung này thuộc phần mấy"
+    ],
+    "answer": "Đây là tài liệu 'Rối Loạn Tăng Động Giảm Chú Ý (Phần 3)', được tổng hợp vào năm 2026 từ các nguồn y khoa uy tín nhằm mục đích giáo dục và nâng cao nhận thức cộng đồng."
+  }
+]
