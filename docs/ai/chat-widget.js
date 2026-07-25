@@ -47,7 +47,7 @@ export async function askAI(question)
     }
   }
 
-  if (bestScore < 0.70)
+  if (bestScore < 0.7)
   {
     return 'Mình chưa hiểu rõ câu hỏi. Bạn có thể nói rõ hơn được không?';
   }
