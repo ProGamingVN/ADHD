@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Demo — AI Chatbot ADHD (Phase 8, tự kiểm tra)</title>
+<link rel="stylesheet" href="./ui/chat-widget.css" />
+<style>
+  /* Chỉ để trang demo có nội dung nền — không thuộc về widget */
+  body { font-family: 'Segoe UI', sans-serif; margin: 0; padding: 40px; background: #fff8f2; color: #2b2135; }
+  main { max-width: 640px; margin: 0 auto; }
+  h1 { font-size: 1.4rem; }
+  code { background: rgba(0,0,0,0.06); padding: 2px 6px; border-radius: 4px; }
+  .note { font-size: 0.85rem; color: #6b5c74; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Demo Phase 8 — Chat UI Widget (độc lập, không đụng index.html thật)</h1>
+  <p>Trang này chỉ dùng để tự kiểm tra widget mới. Mở bằng một static server
+  (vd. <code>npx serve docs</code> hoặc <code>python -m http.server</code> trong
+  thư mục <code>docs/</code>) rồi truy cập <code>/ai2/demo.html</code> — mở trực
+  tiếp bằng <code>file://</code> có thể bị chặn <code>fetch()</code> JSON do CORS.</p>
+  <p class="note">Nút chat nổi ở góc dưới bên phải.</p>
+</main>
+
+<script type="module">
+  import { ChatEngine } from './core/chat/chat-engine.js';
+  import { mountChatWidget } from './ui/chat-widget.js';
+
+  async function bootstrap() {
+    const res = await fetch('./data/knowledge-graph.json');
+    if (!res.ok) throw new Error('Không tải được knowledge-graph.json: ' + res.status);
+    const graph = await res.json();
+
+    const chatEngine = new ChatEngine(graph);
+    mountChatWidget(document.body, chatEngine);
+  }
+
+  bootstrap().catch((err) => {
+    console.error(err);
+    const warn = document.createElement('p');
+    warn.style.color = '#c4445a';
+    warn.textContent = 'Lỗi khởi tạo demo: ' + err.message;
+    document.querySelector('main').appendChild(warn);
+  });
+</script>
+</body>
+</html>

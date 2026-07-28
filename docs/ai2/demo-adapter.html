@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Demo Adapter — Chatbox thật + AI Engine mới (ai2)</title>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Sora:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<style>
+  /* Chỉ để trang demo có nội dung nền dễ nhìn — KHÔNG thuộc về chatbox thật */
+  body { padding: 40px; }
+  main { max-width: 680px; margin: 0 auto; }
+  .note { font-size: 0.85rem; color: var(--text-muted); background: #fff; border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 14px 18px; }
+  code { background: rgba(0,0,0,0.06); padding: 2px 6px; border-radius: 4px; }
+  h1 { font-size: 1.3rem; margin-bottom: 14px; }
+  section#nhan-dien, section#nguyen-nhan-hau-qua, section#dieu-tri-ho-tro, section#co-so-dieu-tri, section#cau-hoi-nang-cao, section#lien-he {
+    padding: 24px 0; border-top: 1px dashed var(--line); margin-top: 24px;
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1>Demo Adapter — Test AI Engine mới gắn vào #chatbox THẬT</h1>
+  <p class="note">
+    Trang này dùng lại <code>style.css</code> gốc + đúng markup <code>#chatbox</code>/<code>#chat-toggle</code>
+    của <code>index.html</code>, và load logic chat y hệt mục 13 trong <code>script.js</code> gốc — chỉ khác
+    "bộ não" trả lời là <code>./chat-widget.js</code> (Knowledge Graph) thay vì embedding cũ.<br><br>
+    Mở qua static server (vd. <code>npx serve docs</code> rồi vào <code>/ai2/demo-adapter.html</code>) vì cần
+    <code>fetch()</code> JSON — mở trực tiếp bằng <code>file://</code> có thể bị chặn.
+  </p>
+
+  <!-- Các anchor rỗng để test nút "Đi tới phần" + tab + accordion mà không phải copy nguyên index.html -->
+  <section id="nhan-dien"><h2>01 · Nhận diện ADHD (placeholder cho demo)</h2></section>
+  <section id="nguyen-nhan-hau-qua"><h2>02 · Nguyên nhân · Hậu quả (placeholder)</h2></section>
+  <section id="dieu-tri-ho-tro"><h2>03 · Điều trị · Hỗ trợ (placeholder)</h2></section>
+
+  <section id="co-so-dieu-tri">
+    <h2>04 · Cơ sở điều trị (placeholder — có tab thật để test auto-switch)</h2>
+    <div class="tabs">
+      <div class="tabs-nav" role="tablist">
+        <button class="tab-btn is-active" role="tab" aria-selected="true" data-tab="hcm">TP. Hồ Chí Minh</button>
+        <button class="tab-btn" role="tab" aria-selected="false" data-tab="hn">Hà Nội</button>
+        <span class="tab-indicator" aria-hidden="true"></span>
+      </div>
+      <div class="tabs-panels">
+        <div class="tab-panel is-active" id="panel-hcm">Nội dung TP.HCM (placeholder)</div>
+        <div class="tab-panel" id="panel-hn" hidden>Nội dung Hà Nội (placeholder)</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="cau-hoi-nang-cao">
+    <h2>05 · Câu hỏi (placeholder — có 1 accordion thật để test auto-open)</h2>
+    <div class="accordion">
+      <div class="accordion-item">
+        <button class="accordion-question" aria-expanded="false">
+          <span>Có phải ADHD chỉ là cái cớ cho sự lười biếng, thiếu kỷ luật hoặc do trẻ em xem quá nhiều điện thoại, mạng xã hội?</span>
+        </button>
+        <div class="accordion-answer"><p>(placeholder — nội dung thật nằm trong index.html)</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="lien-he"><h2>Liên hệ (placeholder)</h2></section>
+</main>
+
+<div class="chat-toggle-container">
+  <button id="chat-toggle" class="chat-toggle-btn" type="button" aria-label="Mở cửa sổ chat">🤖</button>
+</div>
+<div id="chatbox">
+  <div class="resize-handle" aria-label="Thay đổi kích thước"></div>
+  <div id="chatbox-header">
+    <h3>Trợ lý ADHD</h3>
+    <button id="chatbox-close" type="button" aria-label="Đóng cửa sổ chat">&times;</button>
+  </div>
+  <div id="chatbox-messages"></div>
+  <div id="chatbox-input">
+    <input type="text" placeholder="Nhập tin nhắn..." />
+    <button type="button">Gửi</button>
+  </div>
+</div>
+
+<script type="module" src="./chat-widget.js"></script>
+<script type="module">
+  // Bản sao NGUYÊN VĂN mục "13. Chat widget toggle" trong script.js gốc —
+  // để demo hành xử giống hệt thật, không cần đụng file script.js gốc.
+  const chatToggleBtn = document.getElementById('chat-toggle');
+  const chatbox = document.getElementById('chatbox');
+  const chatboxClose = document.getElementById('chatbox-close');
+  const chatboxInput = document.getElementById('chatbox-input');
+  const chatboxInputField = chatboxInput.querySelector('input');
+  const chatboxInputButton = chatboxInput.querySelector('button');
+  const chatboxMessages = document.getElementById('chatbox-messages');
+
+  let askAI = null;
+  (async () => {
+    const module = await import('./chat-widget.js');
+    askAI = module.askAI;
+  })();
+
+  chatToggleBtn.addEventListener('click', () => {
+    const wasOpen = chatbox.classList.contains('open');
+    chatbox.classList.toggle('open');
+    if (chatbox.classList.contains('open') && !wasOpen) {
+      chatboxInputField.focus();
+      sendGreeting();
+    }
+  });
+  chatboxClose.addEventListener('click', () => chatbox.classList.remove('open'));
+
+  async function sendMessage() {
+    const messageText = chatboxInputField.value.trim();
+    if (!messageText) return;
+    const userMsgDiv = document.createElement('div');
+    userMsgDiv.className = 'chat-message user';
+    userMsgDiv.textContent = messageText;
+    chatboxMessages.appendChild(userMsgDiv);
+    chatboxInputField.value = '';
+    chatboxMessages.scrollTop = chatboxMessages.scrollHeight;
+
+    const typingDiv = document.createElement('div');
+    typingDiv.className = 'chat-message bot';
+    typingDiv.textContent = 'Đang gõ...';
+    chatboxMessages.appendChild(typingDiv);
+    chatboxMessages.scrollTop = chatboxMessages.scrollHeight;
+
+    let botResponse = 'Xin lỗi, có lỗi xảy ra.';
+    try {
+      botResponse = askAI ? await askAI(messageText) : 'Chatbot đang được tải, vui lòng thử lại sau giây lát.';
+    } catch (err) {
+      console.error(err);
+      botResponse = 'Đã có lỗi xảy ra khi xử lý tin nhắn.';
+    }
+
+    typingDiv.remove();
+    const botMsgDiv = document.createElement('div');
+    botMsgDiv.className = 'chat-message bot';
+    botMsgDiv.innerHTML = botResponse;
+    botMsgDiv.querySelectorAll('a[href^="#"]').forEach((link) => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetEl = document.querySelector(link.getAttribute('href'));
+        if (targetEl) targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+    chatboxMessages.appendChild(botMsgDiv);
+    chatboxMessages.scrollTop = chatboxMessages.scrollHeight;
+  }
+
+  function sendGreeting() {
+    const greeting = 'Xin chào! Tôi là trợ lý ADHD. Bạn có thể hỏi tôi bất kỳ câu hỏi nào về ADHD nhé.';
+    const botDiv = document.createElement('div');
+    botDiv.className = 'chat-message bot';
+    botDiv.textContent = greeting;
+    chatboxMessages.appendChild(botDiv);
+  }
+
+  chatboxInputButton.addEventListener('click', sendMessage);
+  chatboxInputField.addEventListener('keypress', (e) => { if (e.key === 'Enter') sendMessage(); });
+
+  // Tab switch (bản rút gọn từ script.js, đủ để test auto-switch tab)
+  document.querySelectorAll('.tab-btn').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.tab-btn').forEach((b) => b.classList.toggle('is-active', b === btn));
+      const key = btn.getAttribute('data-tab');
+      document.querySelectorAll('.tab-panel').forEach((p) => {
+        const active = p.id === 'panel-' + key;
+        p.classList.toggle('is-active', active);
+        p.hidden = !active;
+      });
+    });
+  });
+
+  // Accordion (bản rút gọn từ script.js, đủ để test auto-open)
+  document.querySelectorAll('.accordion-question').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const isOpen = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!isOpen));
+    });
+  });
+</script>
+</body>
+</html>

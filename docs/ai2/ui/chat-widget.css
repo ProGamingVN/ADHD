@@ -1,0 +1,330 @@
+/**
+ * STYLE: Chat UI Widget (Phase 8) — TRIỂN KHAI THẬT
+ *
+ * Widget này TỰ CHỨA (self-contained): không phụ thuộc style.css của site
+ * cũ, không đụng tới #chatbox/#chat-toggle hiện có ở index.html (đó là
+ * UI của bản cũ dùng embedding, vẫn giữ nguyên). Toàn bộ class dùng tiền
+ * tố "aicw-" (AI Chat Widget) để không bao giờ đụng độ tên class có sẵn.
+ *
+ * Token màu: định nghĩa var(--aicw-*) với fallback là chính bảng màu của
+ * site (coral/plum/paper...) — nếu nhúng vào trang đang có, nó tự động ăn
+ * theo theme trang; nếu dùng độc lập ở nơi khác, fallback vẫn ra đúng gu
+ * màu đã thiết kế, không rơi về mặc định kiểu "AI-generated".
+ *
+ * Dark mode: ưu tiên [data-aicw-theme="dark"] do JS gán (người dùng bấm nút
+ * toggle trong header, có nhớ lựa chọn qua localStorage) — nếu người dùng
+ * CHƯA từng chọn, tự theo prefers-color-scheme của hệ điều hành.
+ */
+
+.aicw-root {
+  --aicw-coral: var(--coral, #f56e6e);
+  --aicw-coral-dark: var(--coral-dark, #7e2c19);
+  --aicw-ink: var(--ink, #c4445a);
+  --aicw-text: var(--text, #2b2135);
+  --aicw-text-muted: var(--text-muted, #6b5c74);
+  --aicw-paper: var(--paper, #fff8f2);
+  --aicw-surface: var(--surface, #ffffff);
+  --aicw-line: var(--line, rgba(36, 19, 50, 0.1));
+  --aicw-radius-sm: var(--radius-sm, 10px);
+  --aicw-radius-md: var(--radius-md, 18px);
+  --aicw-radius-lg: var(--radius-lg, 28px);
+  --aicw-shadow-md: var(--shadow-md, 0 12px 32px rgba(36, 19, 50, 0.1));
+  --aicw-shadow-lg: var(--shadow-lg, 0 24px 60px rgba(36, 19, 50, 0.16));
+  --aicw-font: var(--font-body, 'Be Vietnam Pro', 'Segoe UI', sans-serif);
+  --aicw-ease: var(--ease, cubic-bezier(0.22, 1, 0.36, 1));
+  --aicw-ease-elastic: var(--ease-elastic, cubic-bezier(0.34, 1.56, 0.64, 1));
+
+  font-family: var(--aicw-font);
+  color: var(--aicw-text);
+}
+
+/* Auto dark mode theo hệ điều hành khi người dùng chưa chọn thủ công */
+@media (prefers-color-scheme: dark) {
+  .aicw-root:not([data-aicw-theme='light']) {
+    --aicw-text: #f1e9ee;
+    --aicw-text-muted: #c3b3c4;
+    --aicw-paper: #1c1420;
+    --aicw-surface: #251a2c;
+    --aicw-line: rgba(255, 255, 255, 0.1);
+  }
+}
+/* Người dùng chọn thủ công qua nút toggle trong header (ghi đè cả 2 chiều) */
+.aicw-root[data-aicw-theme='dark'] {
+  --aicw-text: #f1e9ee;
+  --aicw-text-muted: #c3b3c4;
+  --aicw-paper: #1c1420;
+  --aicw-surface: #251a2c;
+  --aicw-line: rgba(255, 255, 255, 0.1);
+}
+.aicw-root[data-aicw-theme='light'] {
+  --aicw-text: var(--text, #2b2135);
+  --aicw-text-muted: var(--text-muted, #6b5c74);
+  --aicw-paper: var(--paper, #fff8f2);
+  --aicw-surface: var(--surface, #ffffff);
+  --aicw-line: var(--line, rgba(36, 19, 50, 0.1));
+}
+
+.aicw-root * { box-sizing: border-box; }
+
+/* ---------- Floating button ---------- */
+.aicw-fab {
+  position: fixed;
+  bottom: 26px;
+  right: 26px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: none;
+  background: var(--aicw-coral);
+  color: #fff;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--aicw-shadow-md);
+  cursor: pointer;
+  z-index: 1150;
+  transition: background 0.3s var(--aicw-ease), transform 0.45s var(--aicw-ease-elastic), border-radius 0.35s var(--aicw-ease);
+}
+.aicw-fab:hover { background: var(--aicw-coral-dark); transform: scale(1.08) rotate(-8deg); border-radius: 34%; }
+.aicw-fab:active { transform: scale(0.92); }
+.aicw-fab .aicw-fab-badge {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--aicw-ink);
+  border: 2px solid var(--aicw-paper);
+  display: none;
+}
+.aicw-fab.has-unread .aicw-fab-badge { display: block; }
+
+/* ---------- Panel ---------- */
+.aicw-panel {
+  position: fixed;
+  bottom: 26px;
+  right: 90px;
+  width: 380px;
+  max-width: calc(100vw - 32px);
+  height: 560px;
+  max-height: calc(100vh - 100px);
+  background: var(--aicw-surface);
+  border-radius: var(--aicw-radius-lg);
+  box-shadow: var(--aicw-shadow-lg);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.85) translateY(16px);
+  transform-origin: bottom right;
+  transition: opacity 0.35s var(--aicw-ease), visibility 0.35s var(--aicw-ease), transform 0.45s var(--aicw-ease-elastic);
+  z-index: 1200;
+}
+.aicw-panel.is-open { opacity: 1; visibility: visible; transform: scale(1) translateY(0); }
+
+.aicw-header {
+  flex: 0 0 auto;
+  padding: 16px 18px;
+  background: linear-gradient(135deg, var(--aicw-coral), var(--aicw-coral-dark));
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.aicw-header-title { display: flex; flex-direction: column; line-height: 1.25; }
+.aicw-header-title strong { font-size: 1rem; }
+.aicw-header-title span { font-size: 0.76rem; opacity: 0.85; }
+.aicw-header-actions { display: flex; align-items: center; gap: 4px; }
+.aicw-icon-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.16);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background 0.2s var(--aicw-ease);
+}
+.aicw-icon-btn:hover { background: rgba(255, 255, 255, 0.3); }
+
+/* ---------- Messages ---------- */
+.aicw-messages {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: var(--aicw-paper);
+  scroll-behavior: smooth;
+}
+.aicw-messages::-webkit-scrollbar { width: 8px; }
+.aicw-messages::-webkit-scrollbar-thumb { background: var(--aicw-coral); border-radius: 8px; }
+
+.aicw-msg-row { display: flex; flex-direction: column; max-width: 86%; }
+.aicw-msg-row.user { align-self: flex-end; align-items: flex-end; }
+.aicw-msg-row.bot { align-self: flex-start; align-items: flex-start; }
+
+.aicw-bubble {
+  padding: 10px 14px;
+  border-radius: 18px;
+  font-size: 0.93rem;
+  line-height: 1.55;
+}
+.aicw-bubble a { color: inherit; text-decoration: underline; }
+.aicw-msg-row.user .aicw-bubble {
+  background: var(--aicw-coral);
+  color: #fff;
+  border-bottom-right-radius: 4px;
+}
+.aicw-msg-row.bot .aicw-bubble {
+  background: var(--aicw-surface);
+  color: var(--aicw-text);
+  border: 1px solid var(--aicw-line);
+  border-bottom-left-radius: 4px;
+}
+.aicw-msg-row.bot.low-confidence .aicw-bubble {
+  border-style: dashed;
+  color: var(--aicw-text-muted);
+}
+
+/* Nút copy — chỉ hiện với tin nhắn bot, xuất hiện khi hover/focus cả hàng */
+.aicw-copy-btn {
+  margin-top: 4px;
+  border: none;
+  background: none;
+  color: var(--aicw-text-muted);
+  font-size: 0.74rem;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s var(--aicw-ease), color 0.2s var(--aicw-ease);
+  padding: 2px 4px;
+}
+.aicw-msg-row.bot:hover .aicw-copy-btn,
+.aicw-msg-row.bot:focus-within .aicw-copy-btn { opacity: 1; }
+.aicw-copy-btn:hover { color: var(--aicw-ink); }
+.aicw-copy-btn.copied { opacity: 1; color: var(--aicw-ink); }
+
+/* Typing indicator */
+.aicw-typing { display: flex; gap: 4px; padding: 4px 2px; }
+.aicw-typing span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--aicw-text-muted);
+  animation: aicw-bounce 1.1s infinite ease-in-out;
+}
+.aicw-typing span:nth-child(2) { animation-delay: 0.15s; }
+.aicw-typing span:nth-child(3) { animation-delay: 0.3s; }
+@keyframes aicw-bounce {
+  0%, 60%, 100% { transform: translateY(0); opacity: 0.5; }
+  30% { transform: translateY(-4px); opacity: 1; }
+}
+
+/* Loading state (khi widget chưa sẵn sàng / graph chưa load xong) */
+.aicw-loading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  color: var(--aicw-text-muted);
+  font-size: 0.85rem;
+}
+.aicw-spinner {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid var(--aicw-line);
+  border-top-color: var(--aicw-coral);
+  animation: aicw-spin 0.7s linear infinite;
+}
+@keyframes aicw-spin { to { transform: rotate(360deg); } }
+
+/* ---------- Suggested questions ---------- */
+.aicw-suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 2px 0 4px;
+}
+.aicw-chip {
+  border: 1px solid var(--aicw-coral);
+  color: var(--aicw-coral-dark);
+  background: transparent;
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 0.78rem;
+  cursor: pointer;
+  transition: background 0.2s var(--aicw-ease), color 0.2s var(--aicw-ease);
+  text-align: left;
+}
+.aicw-chip:hover { background: var(--aicw-coral); color: #fff; }
+
+/* ---------- Input row ---------- */
+.aicw-input-row {
+  flex: 0 0 auto;
+  display: flex;
+  gap: 8px;
+  padding: 12px 14px;
+  background: var(--aicw-surface);
+  border-top: 1px solid var(--aicw-line);
+}
+.aicw-input {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1.5px solid var(--aicw-line);
+  border-radius: var(--aicw-radius-sm);
+  background: var(--aicw-paper);
+  color: var(--aicw-text);
+  font-family: inherit;
+  font-size: 0.9rem;
+}
+.aicw-input:focus {
+  outline: none;
+  border-color: var(--aicw-coral);
+  box-shadow: 0 0 0 3px rgba(245, 110, 110, 0.16);
+}
+.aicw-send-btn {
+  border: none;
+  background: var(--aicw-coral);
+  color: #fff;
+  border-radius: var(--aicw-radius-sm);
+  padding: 0 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s var(--aicw-ease);
+}
+.aicw-send-btn:hover { background: var(--aicw-coral-dark); }
+.aicw-send-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+/* ---------- Empty state ---------- */
+.aicw-empty {
+  margin: auto;
+  text-align: center;
+  color: var(--aicw-text-muted);
+  font-size: 0.85rem;
+  padding: 24px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 480px) {
+  .aicw-panel {
+    right: 16px;
+    bottom: 86px;
+    width: calc(100vw - 32px);
+    height: calc(100vh - 140px);
+  }
+  .aicw-fab { bottom: 18px; right: 18px; width: 46px; height: 46px; font-size: 21px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aicw-fab, .aicw-panel, .aicw-typing span, .aicw-spinner { animation: none !important; transition: none !important; }
+}
