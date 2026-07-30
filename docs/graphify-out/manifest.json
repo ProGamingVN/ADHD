@@ -1,0 +1,157 @@
+{
+  ".vscode/settings.json": {
+    "mtime": 1785249989.745792,
+    "ast_hash": "4aa85c6acde752675b31b354987521ce",
+    "semantic_hash": "4aa85c6acde752675b31b354987521ce"
+  },
+  "ai2/chat-widget.js": {
+    "mtime": 1785291761.9747694,
+    "ast_hash": "0b4b2572cbf906b618d4f25ec2e3eaa7",
+    "semantic_hash": "0b4b2572cbf906b618d4f25ec2e3eaa7"
+  },
+  "ai2/core/answer/answer-composer.js": {
+    "mtime": 1785231660.8772411,
+    "ast_hash": "3d991bfed085c1f0700fbae7f3bfeccc",
+    "semantic_hash": "3d991bfed085c1f0700fbae7f3bfeccc"
+  },
+  "ai2/core/chat/chat-engine.js": {
+    "mtime": 1785138398.2303898,
+    "ast_hash": "e5f2d4a3d06dd9ec305d51299c3eb789",
+    "semantic_hash": "e5f2d4a3d06dd9ec305d51299c3eb789"
+  },
+  "ai2/core/chat/small-talk.js": {
+    "mtime": 1785138381.2554002,
+    "ast_hash": "08e445b3b79aac00e68cffdd6f758899",
+    "semantic_hash": "08e445b3b79aac00e68cffdd6f758899"
+  },
+  "ai2/core/chunker/semantic-chunker.js": {
+    "mtime": 1785291188.2939272,
+    "ast_hash": "3f38b5860233cc117fbebdc509cc2db9",
+    "semantic_hash": "3f38b5860233cc117fbebdc509cc2db9"
+  },
+  "ai2/core/cleaner/content-cleaner.js": {
+    "mtime": 1785291165.5579076,
+    "ast_hash": "537a9799e7568125fdcd0023dee84b9f",
+    "semantic_hash": "537a9799e7568125fdcd0023dee84b9f"
+  },
+  "ai2/core/extractor/content-extractor.js": {
+    "mtime": 1785291108.7437794,
+    "ast_hash": "9821d3542651c0fe77c086d049aae428",
+    "semantic_hash": "9821d3542651c0fe77c086d049aae428"
+  },
+  "ai2/core/generators/_utils/text-utils.js": {
+    "mtime": 1785172084.4814582,
+    "ast_hash": "067d1484916214f0205902f51b2bb463",
+    "semantic_hash": "067d1484916214f0205902f51b2bb463"
+  },
+  "ai2/core/generators/alias-generator.js": {
+    "mtime": 1785130800.0854545,
+    "ast_hash": "d71e423168205c99ca88ebf49c190b0e",
+    "semantic_hash": "d71e423168205c99ca88ebf49c190b0e"
+  },
+  "ai2/core/generators/entity-generator.js": {
+    "mtime": 1785130762.0388267,
+    "ast_hash": "c27a13c85f22a5c8b0c7d4186abd638c",
+    "semantic_hash": "c27a13c85f22a5c8b0c7d4186abd638c"
+  },
+  "ai2/core/generators/intent-generator.js": {
+    "mtime": 1785135335.2020853,
+    "ast_hash": "52bde7579eb18d90ce01dd921f3bc577",
+    "semantic_hash": "52bde7579eb18d90ce01dd921f3bc577"
+  },
+  "ai2/core/generators/keyword-generator.js": {
+    "mtime": 1785172098.56158,
+    "ast_hash": "cff7e26ac4fd308eda016f19193e3cfd",
+    "semantic_hash": "cff7e26ac4fd308eda016f19193e3cfd"
+  },
+  "ai2/core/generators/question-generator.js": {
+    "mtime": 1785130814.0932622,
+    "ast_hash": "962f7219585e67c9eedac858fc56dc5a",
+    "semantic_hash": "962f7219585e67c9eedac858fc56dc5a"
+  },
+  "ai2/core/graph/graph-builder.js": {
+    "mtime": 1785131033.1097376,
+    "ast_hash": "b88089e5f567029b3eedce5e08d5212e",
+    "semantic_hash": "b88089e5f567029b3eedce5e08d5212e"
+  },
+  "ai2/core/graph/relationship-builder.js": {
+    "mtime": 1785131042.1018643,
+    "ast_hash": "d968a4e17fcbcd396e3e1ad4b2d0ac43",
+    "semantic_hash": "d968a4e17fcbcd396e3e1ad4b2d0ac43"
+  },
+  "ai2/core/parser/normalize.js": {
+    "mtime": 1785135361.210153,
+    "ast_hash": "3856f2f420f3080b153fe19d6869e090",
+    "semantic_hash": "3856f2f420f3080b153fe19d6869e090"
+  },
+  "ai2/core/parser/query-parser.js": {
+    "mtime": 1785135381.2082262,
+    "ast_hash": "5c251dbeca8ad9fa8f8d1fd091d7e8ac",
+    "semantic_hash": "5c251dbeca8ad9fa8f8d1fd091d7e8ac"
+  },
+  "ai2/core/parser/query-rewriter.js": {
+    "mtime": 1785135395.2052395,
+    "ast_hash": "265351d203044687de253cff9018cacb",
+    "semantic_hash": "265351d203044687de253cff9018cacb"
+  },
+  "ai2/core/parser/tokenizer.js": {
+    "mtime": 1785135367.2050998,
+    "ast_hash": "2812121418f6129f54930fac7acbb811",
+    "semantic_hash": "2812121418f6129f54930fac7acbb811"
+  },
+  "ai2/core/scoring/scoring-engine.js": {
+    "mtime": 1785231240.1532857,
+    "ast_hash": "a5daf9feb28c0ffe4c7aea9ab2fbafa5",
+    "semantic_hash": "a5daf9feb28c0ffe4c7aea9ab2fbafa5"
+  },
+  "ai2/core/search/graph-search.js": {
+    "mtime": 1785130852.0970657,
+    "ast_hash": "c66f1b704b5ccb0365ebb97369397a8f",
+    "semantic_hash": "c66f1b704b5ccb0365ebb97369397a8f"
+  },
+  "ai2/data/knowledge-graph.json": {
+    "mtime": 1785229119.250795,
+    "ast_hash": "be31275870da66671372dc377eab138b",
+    "semantic_hash": "be31275870da66671372dc377eab138b"
+  },
+  "ai2/pipeline.js": {
+    "mtime": 1785131058.098298,
+    "ast_hash": "3836eabe1887cbb1cf472ba3e2d0b0aa",
+    "semantic_hash": "3836eabe1887cbb1cf472ba3e2d0b0aa"
+  },
+  "ai2/ui/chat-widget.js": {
+    "mtime": 1785133129.1644335,
+    "ast_hash": "2d71064d11b24cb3baa7fbefb3c97d36",
+    "semantic_hash": "2d71064d11b24cb3baa7fbefb3c97d36"
+  },
+  "ai/build.js": {
+    "mtime": 1784972236.7431934,
+    "ast_hash": "0d95720a0a4f78fce53fc35ca370acf2",
+    "semantic_hash": "0d95720a0a4f78fce53fc35ca370acf2"
+  },
+  "ai/chat-widget.js": {
+    "mtime": 1784972384.7686586,
+    "ast_hash": "74eaa9aa6d94a1f1a01453dab7ac1fb5",
+    "semantic_hash": "74eaa9aa6d94a1f1a01453dab7ac1fb5"
+  },
+  "ai/embeddings.json": {
+    "mtime": 1784991603.647923,
+    "ast_hash": "a82e2c83a63448d269fbc4cab8cd793c",
+    "semantic_hash": "a82e2c83a63448d269fbc4cab8cd793c"
+  },
+  "ai/knowledge.json": {
+    "mtime": 1785166018.6343026,
+    "ast_hash": "e1bad23647f906767580c4c20fd9783f",
+    "semantic_hash": "e1bad23647f906767580c4c20fd9783f"
+  },
+  "script.js": {
+    "mtime": 1785167037.045821,
+    "ast_hash": "f35582d6dd5c3d16466c5d99d33f6c5e",
+    "semantic_hash": "f35582d6dd5c3d16466c5d99d33f6c5e"
+  },
+  "skills-lock.json": {
+    "mtime": 1785129493.6340704,
+    "ast_hash": "c824b0070c931c3cf337169cb41ea6ff",
+    "semantic_hash": "c824b0070c931c3cf337169cb41ea6ff"
+  }
+}
