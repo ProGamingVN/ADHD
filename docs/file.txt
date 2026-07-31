@@ -1,0 +1,455 @@
+Vài Điều Về ADHD
+Hiểu đúng, đồng hành đúng
+Rối loạn tăng động giảm chú ý
+ADHD
+nhận diện
+nguyên nhân
+hậu quả
+điều trị
+hỗ trợ
+10. Rối loạn tăng động giảm chú ý (dup)
+11. ADHD (dup)
+12. Nhận diện
+13. Nguyên nhân
+14. Hậu quả
+15. Cơ sở điều trị
+16. Điều trị
+17. Hỗ trợ
+18. Câu hỏi
+19. Liên hệ
+20. hỗ trợ (dup)
+21. Rối loạn phát triển thần kinh
+22. ADHD (dup)
+23. Chủ đề chính (from stat)
+24. Đồng mắc hội chứng TIC
+25. Đồng hành cùng bạn
+26. Tìm hiểu ngay
+27. Xem video giới thiệu
+28. Mục lục
+29. Khám phá kiến thức về ADHD
+30. Năm chủ đề chính
+31. nhận diện (dup)
+32. nguyên nhân (dup)
+33. hướng điều trị
+34. cơ sở khám chữa
+35. câu hỏi thường gặp
+36. Nhận diện ADHD
+37. Khái niệm
+38. tiêu chuẩn DSM-5
+39. DSM-5
+40. phân nhóm biểu hiện
+41. Nguyên nhân – Hậu quả
+42. yếu tố sinh học
+43. tác động thực tế
+44. Điều trị – Hỗ trợ
+45. Can thiệp thực tế
+46. Điều trị – Hỗ trợ
+47. Can thiệp y khoa
+48. liệu pháp thể chất
+49. liệu pháp tâm lý
+50. Cơ sở điều trị
+51. danh sách bệnh viện
+52. trung tâm có chuyên khoa
+53. điều trị ADHD
+54. Câu hỏi nâng cao nhận thức
+55. hiểu lầm phổ biến
+56. ADHD (dup)
+57. nhóm chủ đề
+58. Nhận diện
+59. Nhận diện ADHD (dup)
+60. Khái niệm (dup)
+61. Rối loạn tăng động giảm chú ý (dup)
+62. ADHD (dup)
+63. rối loạn phát triển thần kinh
+64. biểu hiện giảm chú ý
+65. biểu hiện tăng động/bốc động
+66. tăng động/bốc động (let's standardize)
+67. chức năng sống
+68. Cleveland Clinic
+69. Attention Deficit Hyperactivity Disorder (ADHD)
+70. Hội Hội Tâm Thần Mỹ
+71. nhiều gương mặt đa chiều
+72. gương mặt đa chiều
+73. Nhiều mặt của ADHD
+74. Predominantly Inattentive
+75. Giảm chú ý trội
+76. khó duy trì sự tập trung
+77. dễ bị phân tâm
+78. tác nhân bên ngoài
+79. quên lịch trình hằng ngày
+80. gặp trở ngại khi tổ chức công việc
+81. quản lý thời gian
+82. Hyperactive-Impulsive
+83. Tăng động – Hấp tấp trội
+84. dư thừa năng lượng thể chất
+85. thiếu khả năng kiểm soát xung động
+86. bồn chồn
+87. khó ngồi yên
+88. nói quá nhiều
+89. cắt ngang lời người khác
+90. thiếu kiên nhẫn
+91. Combined Presentation
+92. Hỗn hợp
+93. xuất hiện đồng thời
+94. tương đương các tiêu chuẩn chẩn đo안
+95. ít nhất 6 tháng gần nhất
+96. Rối loạn TĂNG ĐỘNG GIẨM CHÚ Ý – ADHD
+97. 6 dấu hiệu và triệu chứng của bệnh
+98. Psych2Go Vietnam
+99. Nguyên nhân & Hậu quả
+100. Nguyên nhân (dup)
+101. Hậu quả (dup)
+102. Y học hiện đại
+103. tình trạng y sinh học phức tạp
+104. sự lười biếng
+105. giáo dục sai cách
+106. Yếu tố di truyền
+107. nghiên cứu chứng minh
+108. hệ số di truyền
+109. ADHD rất cao
+110. dao động từ 70% đến 80%
+111. 70% đến 80%
+112. Cấu trúc và chức năng não bộ
+113. Chẩn đoán hình ảnh học (fMRI)
+114. fMRI
+115. sự chậm phát triển
+116. giảm lưu lượng máu hoạt động
+117. vỏ não trước trán
+118. trung tâm điều hành nhận thức và kiểm soát xung động
+119. ADHD brain vs normal brain
+120. Chất dẫn truyền thần kinh
+121. sự rối loạn điều hòa
+122. thiếu hụt
+123. hai chất cốt lõi
+124. Dopamine (động lực)
+125. Norepinephrine (sự tập trung)
+126. hệ thống truyền tải tín hiệu của não bộ
+127. Hậu quả (dup)
+128. Suy giảm hiệu suất công việc và học tập
+129. dễ rơi vào vòng lặp trì hoãn
+130. chậm deadline
+131. khó hoàn thành mục tiêu dài hạn
+132. hội chứng kiệt sức (burnout)
+133. burnout
+134. khả năng quản lý thời gian kém
+135. Tổn thương tâm lý
+136. liên tục đối mặt với thất bại
+137. định kiến xung quanh
+138. gắn mác "lười biếng"
+139. gäne mác "thiếu tập trung"
+140. kích hoạt trạng thái tự ti
+141. trạng thái tự ti
+142. lo âu kéo dài
+143. trầm cảm
+144. Trở ngại trong các mối quan hệ
+145. tính bốc đồng
+146. hấp tấp
+147. xu hướng ngắt lời người khác
+148. hiểu lầm
+149. xung đột không đáng có
+150. gia đình
+151. bạn bè
+152. đồng nghiệp
+153. Khó khăn trong quản lý cuộc sống
+154. thường xuyên làm thất lạc đồ đạc
+155. gặp thách thức trong chi tiêu
+156. dễ mua sắm bốc đông
+157. duy trì giờ giấc sinh hoạt khoa học
+158. 60–80%
+159. cá nhân mắc hội chứng TIC
+160. Hội chứng TIC
+161. Hội chứng Tourette
+162. Tourette
+163. ghi nhận có các biểu hiện của ADHD
+164. việc thích nghi xã hội
+165. Điều trị & Hỗ trợ
+166. Điều trị (dup)
+167. Hỗ trợ (dup)
+168. Can thiệp y colleges_coach.
+169. dưới chỉ định của bác sĩ chuyên khoa
+170. Thuốc kích thích thần kinh trung ương
+171. Amphetamines
+172. thuốc ADHD
+173. dưới dạng uống
+174. thành phần tương tự
+175. dextroamphetamine
+176. lisdexamfetamine
+177. Methamphetamine
+178. công dụng làm giảm triệu chứng ADHD
+179. tác dụng không mong muốn
+180. giảm sự thèm ăn
+181. tăng huyết áp
+182. Methylphenidate
+183. giúp não tái hấp thu
+184. hormone norepinephrine
+185. dopamine
+186. dưới dạng viên uống
+187. dán dưới da
+188. Thuốc điều trị ADHD không chứa chất kích thích
+189. Atomoxetine
+190. kéo dài thời gian hoạt động
+191. norepinephrine trong não
+192. 1 lần/ngày
+193. tác dụng bất lợi trên gan
+194. vàng da
+195. vàng mắt
+196. mệt mỏi
+197. cần báo bác sĩ
+198. Clonidine
+199. giảm hiếu động
+200. bốc đồng
+201. mất tập trung
+202. tác dụng giảm huyết áp
+203. cần thận trọng
+204. người huyết áp thấp
+205. Guanfacine
+206. thường dùng điều trị
+207. tăng huyết áp
+208. cải thiện trí nhớ
+209. cải thiện hành vi
+210. cải thiện tính hiếu động
+211. liên quan đến ADHD
+212. vinmec.com
+213. Chỉ định dùng thuốc điều trị ADHD
+214. Tập thể dục thường xuyên
+215. đốt cháy năng lượng dư thừa
+216. tăng dopamine
+217. tăng norepinephrine
+218. tăng serotonin
+219. cải thiện tập trung
+220. cải thiện động lực
+221. cải thiện trí nhớ
+222. cải thiện tâm trạng
+223. Ăn uống lành mạnh
+224. bổ sung protein
+225. bổsung carbohydrate phức tạp
+226. bổ sung omega-3
+227. giúp tỉnh táo
+228. giảm hiếu động
+229. duy trì năng lượng ổn định
+230. lâu dài
+231. Thiền chánh niệm
+232. tăng hoạt động ở vỏ non trước trán
+233. vùng chịu trách nhiệm
+234. sự chú ý
+235. lập kế hoạch
+236. kiểm soát xung động
+237. cải thiện điều tiết cảm xúc
+238. Yoga
+239. rèn luyện sự cân bằng
+240. tĩnh lặng
+241. công cụ hữu ích
+242. làm mới bản thân
+243. cảm thấy quá tải
+244. mất kiểm soát
+245. Rối Loạn Tăng Động Giảm Chú ý (P3)
+246. Điều trị & Thuốc ADHD
+247. ThS. BS. Đào Thị Thu Hương
+248. Hỏi Bác sĩ
+249. Cơ sở điều trị
+250. cơ sở điều trị uy tín
+251. danh sách bệnh viện
+252. trung tâm có chuyên khoa
+233. thám khám
+254. điều trị ADHD
+255. hai thành phố lớn
+256. TP. Hồ Chí Minh
+257. Hà Nội
+258. Bệnh viện Tâm thần TP. HCM
+259. Cơ sở 1
+260. 766 Võ Văn Kiệt
+261. P. Chợ Quán
+262. TP.HCM
+263. Cơ sở 2
+264. 26 Bình Minh
+265. ấp 22
+266. xã Bình Lợi
+267. TP.HCM
+268. Cơ sở 3
+269. 165B Phan Đăng Lưu
+270. P. Cầu Kiệu
+271. TP.HCM
+272. Bệnh viện Nhi Đồng
+273. Nhi Đồng 1
+274. 341 Sư Vạn Hạnh
+275. Vườn Lài
+276. TP.HCM
+277. Nhi Đồng 2
+278. 14 Lý Tự Trọng
+279. Sài Gòn
+280. TP.HCM
+281. Nhi Đồng Thành phố
+282. 15 Võ Trần Chí
+283. Tân Nhựt
+284. TP.HCM
+285. Bệnh viện Đại học Y Dược TP. HCM
+286. Cơ sở 1
+287. 215 Hồng Bàng
+288. Chợ Lớn
+289. TP.HCM
+290. Bệnh viện Nhân dân 115
+291. 527 Sư Vạn Hạnh
+292. Hòa Hưng
+293. TP.HCM
+294. Viện Sức khỏe tâm thần
+295. BV Bạch Mai
+296. Tòa nhà T4
+297. T5
+298. T6
+299. số 78 Giải Phóng
+300. Đống Đa
+301. Hà Nội
+302. Khoa Tâm thần
+303. BV Nhi Trung ương
+304. 18/879 La Thành
+305. Đống Đa
+306. Hà Nội
+307. Trung tâm Y khoa số 1
+308. BV Đại học Y Hà Nội
+309. Nhà A5
+310. số 1 Tôn Thất Tùng
+311. Đống Đa
+312. Hà Nội
+313. Câu hỏi
+314. Câu hỏi nâng cao nhận thức
+315. giải đáp
+316. hiểu lầm phổ biến
+317. ADHD (dup)
+318. nhóm chủ đề
+319. Nhận thức chung & Định kiến
+320. ADHD chỉ là cái cờ
+321. sự lười biếng
+322. thiếu kỷ luật
+323. trẻ em xem quá nhiều điện thoại
+324. mạng xã hội
+325. Y học hiện đại khẳng định
+326. rối loạn phát triển thần kinh mang tính y sinh học
+327. thiếu hụt các chất dẫn truyền thần kinh
+328. Dopamine và Norepinephrine
+329. sự chậm phát triển ở vùng vỏ não trước trán
+330. mạng xã hội
+331. thiết bị điện tử
+332. tác nhân gây nhiễu môi trường
+333. bộc lộ
+334. trầm trọng hơn triệu chứng
+335. nguyên nhân gốc rễ
+336. tên gọi 'giảm chú ý'
+337. hiểu lầm
+338. thiếu tập trung
+339. khó điều khiển sự tập trung một cách chủ động
+340. chủ đề hứng thú
+341. áp lực sát giờ
+342. trạng thái 'siêu tập trung' (hyperfocus)
+343. dopamine tăng đột biến
+344. nhiệm vụ lặp lại
+345. thiếu kích thích
+346. ADHD tự biến mất
+347. trẻ lớn lên
+348. người lớn mắc ADHD
+349. ADHD là một hội chứng mãn tính
+350. triệu chứng tăng động hình thể
+351. xu hướng giảm dần
+352. chuyển hóa thành bồn chéon bên trong
+353. trưởng thành
+354. triệu chứng giảm chú ý
+355. triệu chứng bốc đồng
+356. tiếp tục kéo dài
+357. người lớn có thể mắc ADHD
+358. di chứng từ thời thơ ấu
+359. chưa được chẩn đoán
+360. biểu hiện qua quản lý cuộc sống kém
+361. trì hoãn kinh niên
+362. đổi việc liên tục
+363. dễ kiệt sức (burnout)
+364. ADHD có mối liên hệ
+365. hội chứng TIC
+366. vấn đề thần kinh khác
+367. ADHD hiếm khi tồn tại đơn độc
+368. nghiên cứu lâm sàng chỉ ra
+369. 60%–80%
+370. cá nhân mắc các rối loạn vận động/phát âm không kiểm soát
+371. hội chứng TIC hoặc Tourette
+372. chẩn đoán đồng mắc với ADHD
+373. phác đồ can thiệp toàn diện
+374. cá nhân hóa
+375. Xã hội & Các mối quan hệ
+376. người mắc ADHD
+377. gặp khó khăn
+378. kết bạn
+379. duy trì quan hệ tình cảm
+380. xung đột với đồng nghiệp
+381. trở ngại này xuất phát trực tiếp
+382. tính hấp tấp
+383. khó kiểm soát xung động
+384. người ADHD dễ ngắt lời người đối thoại
+385. buột miệng nói trước khi suy nghĩ
+386. phản ứng cảm xúc quá mức
+387. lời chỉ trích
+388. hội chứng nhạy cảm với sự từ chối — RSD
+389. RSD
+390. hành vi vô ý
+391. hiểu sai là ích kỷ
+392. thô lỗ
+393. thiếu tôn trọng
+394. gây rạn nứt không đáng có
+395. mối quan hệ
+396. Chăm sóc & Can thiệp hỗ trợ
+397. thuốc kích thích thần kinh
+398. điều trị ADHD
+399. gây nghiện
+400. thay đổi tính cách
+401. thuốc kích thích chuyên khoa
+402. Methylphenidate
+403. dùng đúng liều
+404. chỉ định nghiêm ngặt của bác sĩ
+405. mang lại hiệu quả
+406. cải thiện tập trung cao
+407. an toàn
+408. không gây nghiện
+409. chất kích thích tự do
+410. giúp cân bằng hóa chất trong não
+411. cá nhân kiểm soát hành vi
+412. bản sắc tính cách
+413. Hỗ trợ người mắc ADHD
+414. quản lý cuộc sống
+415. phương pháp phi y khoa
+416. Hiệu quả nhất là Liệu pháp hành vi và Điều chỉnh môi trường
+417. tối giản hóa không gian làm việc/học tập
+418. giảm tác nhân gây nhiễu
+419. công cụ trực quan
+420. check-list ngắn gọn
+421. đồng hồ Pomodoro
+422. Pomodoro
+423. bảng kế hoạch mã hóa màu
+424. duy trì lối sống
+425. giấc ngủ chất lượng
+426. 30–60 phút vận động thể chất
+427. mỗi ngày
+428. 2026
+429. Vài Điều Về ADHD (dup)
+430. Nguồn tin
+431. tài liệu y khoa
+432. tổng hợp
+433. trích dẫn
+434. Nội dung
+435. Nguyễn dân · Hậu quả
+435. Nguyên nhân
+436. Hậu quả
+437. Điều trị · Hỗ trợ
+438. Điều trị
+439. Hỗ trợ
+440. Câu hỏi nâng cao
+441. Cơ sở điều trị
+442. Liên hệ trực tiếp
+443. Cộng đồng Facebook
+444. Nhóm học sinh
+445. Dự án Zaphyr
+446. Về nhóm thực hiện
+447. thực hiện dự án
+448. Fanpage Facebook
+449. nội dung được tổng hợp
+450. nguồn y khoa uy tín
+451. mục đích giáo dục
+452. nâng cao nhận thức cộng đồng
+453. không thay thế chẩn đoán
+454. tư vấn y tế chuyên môn
