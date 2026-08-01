@@ -474,7 +474,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Hiệu ứng gõ chữ (typewriter) cho tin nhắn bot — an toàn với HTML (không cắt ngang thẻ),
   // và tôn trọng prefers-reduced-motion: nếu người dùng bật thì hiện thẳng luôn, không gõ.
-  function typeIntoElement(el, html, speed = 18) {
+  function typeIntoElement(el, html, speed = 30) {
     return new Promise((resolve) => {
       if (prefersReducedMotion) {
         el.innerHTML = html;
